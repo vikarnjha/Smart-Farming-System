@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Farming Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="hero">
+        <h1>SMART FARMING GUIDE</h1>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">
+            Select Crop
+          </button>
+          <div id="dropdownContent" class="dropdown-content">
+            <a href="#" onclick="showCrop('apple')">Apple</a>
+            <a href="#" onclick="showCrop('banana')">Banana</a>
+            <a href="#" onclick="showCrop('coconut')">Coconut</a>
+            <a href="#" onclick="showCrop('coffee')">Coffee</a>
+            <a href="#" onclick="showCrop('cotton')">Cotton</a>
+            <a href="#" onclick="showCrop('grapes')">Grapes</a>
+            <a href="#" onclick="showCrop('maize')">Maize</a>
+            <a href="#" onclick="showCrop('mango')">Mango</a>
+            <a href="#" onclick="showCrop('orange')">Orange</a>
+            <a href="#" onclick="showCrop('rice')">Rice</a>
+          </div>
+        </div>
+      </header>
+      <div id="cropInfo" class="crop-info">
+        <!-- Crop information will be displayed here -->
+      </div>
+    </div>
+
+    <header>
+      <h1>SMART CROP RECOMMENDATIONS</h1>
+    </header>
+    <main>
+      <section id="crops-table">
+        <h3>Optimal Growing Conditions for Major Crops</h3>
+        <table id="crop-table">
+          <thead>
+            <tr>
+              <th>Crop</th>
+              <th>Nitrogen</th>
+              <th>Phosphorus</th>
+              <th>Potassium</th>
+              <th>Temperature (°C)</th>
+              <th>Humidity (%)</th>
+              <th>pH</th>
+              <th>Rainfall (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be inserted here by JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <section id="crop-recommendation-how-it-works">
+      <h2>How Crop Recommendation Works</h2>
+      <ol>
+        <li>
+          <strong>Data Input:</strong> Begin by entering details about your
+          land, such as soil nutrient levels (N, P, K), pH, and environmental conditions.
+        </li>
+        <li>
+          <strong>Analysis:</strong> Our system analyzes your input data using 
+          machine learning to match it with optimal growing conditions for different crops.
+        </li>
+        <li>
+          <strong>Smart Recommendations:</strong> Get personalized crop suggestions
+          along with detailed guidance on cultivation practices and requirements.
+        </li>
+      </ol>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

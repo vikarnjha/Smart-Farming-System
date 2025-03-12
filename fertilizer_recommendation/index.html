@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <h1>Smart Farming System</h1>
+        </div>
+        <nav class="navbar">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#about">About</a>
+          <a href="../contactus/index.html">Contact</a>
+        </nav>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <h2>Fertilizer Recommendation System</h2>
+            <p>Enter soil parameters and crop type to get fertilizer recommendations</p>
+
+            <form id="fertilizerForm" class="input-form">
+                <div class="form-group">
+                    <label for="cropType">Crop Type:</label>
+                    <select id="cropType" name="cropType" required>
+                        <option value="">Select a crop</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Banana">Banana</option>
+                        <option value="Coconut">Coconut</option>
+                        <option value="Coffee">Coffee</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Grapes">Grapes</option>
+                        <option value="Maize">Maize</option>
+                        <option value="Mango">Mango</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Rice">Rice</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nitrogen">Current Nitrogen (N) Level:</label>
+                    <input type="number" id="nitrogen" name="nitrogen" required step="0.01" min="0" max="140">
+                </div>
+
+                <div class="form-group">
+                    <label for="phosphorus">Current Phosphorus (P) Level:</label>
+                    <input type="number" id="phosphorus" name="phosphorus" required step="0.01" min="0" max="140">
+                </div>
+
+                <div class="form-group">
+                    <label for="potassium">Current Potassium (K) Level:</label>
+                    <input type="number" id="potassium" name="potassium" required step="0.01" min="0" max="200">
+                </div>
+
+                <button type="submit" class="submit-btn">Get Fertilizer Recommendation</button>
+            </form>
+
+            <div id="result-container" class="result-container">
+                <div id="recommendations"></div>
+                
+                <div class="reference-table">
+                    <h4>Optimal Nutrient Levels</h4>
+                    <div class="table-container">
+                        <table id="nutrient-table">
+                            <thead>
+                                <tr>
+                                    <th>Crop</th>
+                                    <th>Required N</th>
+                                    <th>Required P</th>
+                                    <th>Required K</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Table data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
